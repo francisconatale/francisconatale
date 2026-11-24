@@ -14,7 +14,6 @@ export function HeroSection() {
 
       {/* Descripción profesional: concisa, 27–30px, ancho controlado */}
       <p
-        id="sobre-mi"
         className="px-[6vw] mt-14 sm:mt-16 lg:mt-20 text-xl sm:text-2xl md:text-[27px] lg:text-[29px] font-normal leading-[1.28] tracking-tight text-[#d80621] max-w-3xl font-body"
       >
         {portfolioData.claim}
