@@ -161,7 +161,6 @@ export const portfolioData = {
       tags: [
         "PostgreSQL",
         "PL/pgSQL",
-        "Row-Level Security",
         "Next.js",
         "TypeScript",
       ],
