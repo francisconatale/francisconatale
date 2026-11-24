@@ -1,37 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hi there, I'm Francisco Natale 👋
 
-## Getting Started
+**Backend Engineer & Systems Architect** · Río Cuarto, Argentina
 
-First, run the development server:
+I specialize in designing and engineering resilient backend architectures, transactional systems, and high-concurrency APIs with **Java & Spring Boot**. My focus centers on clean and hexagonal architecture, data consistency, idempotency, and offline-first capabilities. Alongside core backend engineering, I develop developer experience (DevEx) tooling and build practical **AI agentic workflows** (NL2SQL pipelines, automated test generation, and intelligent automation).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/1francisco)
+[![Email](https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:francisconatale9@gmail.com)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/francisconatale)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🛠️ Core Stack & Expertise
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Backend & Languages:** Java (Spring Boot, Spring Security, JPA/Hibernate), TypeScript, Python
+- **Architecture & Patterns:** Clean / Hexagonal Architecture, Domain-Driven Design (DDD), Concurrency, Idempotency, Offline-First Sync
+- **Databases & Storage:** PostgreSQL, MySQL, Redis, IndexedDB (Dexie)
+- **Testing & Quality:** JUnit, Cucumber (BDD), Playwright, JaCoCo
+- **DevOps, Automation & AI:** Docker, Linux, CI/CD, n8n, NL2SQL pipelines, Agentic Workflows
 
-## Learn More
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=java,spring,postgres,docker,ts,py,playwright,nextjs" alt="Tech Stack" />
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🚀 Featured Systems & Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **[Kioskito — Production POS & Retail Management](https://kioskito-web.vercel.app)**  
+  Full-scale Point of Sale (POS) and inventory platform operating in production. Features a transactional Spring Boot backend with caching and idempotency mechanisms to eliminate duplicate financial transactions, an offline-first client architecture using IndexedDB, and an automated NL2SQL pipeline for conversational business intelligence querying.  
+  `Java` · `Spring Boot` · `PostgreSQL` · `Offline-First` · `NL2SQL` · `Docker`
 
-## Deploy on Vercel
+- **[Loyalty Backend Service](https://github.com/francisconatale/loyalty)**  
+  High-throughput backend service engineered for customer loyalty programs, point rewards, coupons, and automated marketing campaigns, designed for turnkey integration with retail POS infrastructure.  
+  `Java` · `Spring Boot` · `Clean Architecture` · `PostgreSQL` · `REST API`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **[Graphawler](https://github.com/francisconatale/graphawler)**  
+  Playwright-based developer tool that observes and records manual user interactions, compiling them automatically into maintainable End-to-End (E2E) test suites with visual execution traces and flow reports.  
+  `TypeScript` · `Playwright` · `Test Automation` · `DevEx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# francisconatale
+- **[RL Campus Transport](https://github.com/Uni-Mov/rl-campus-transport)**  
+  Graph-based urban navigation simulation powered by Reinforcement Learning. Features custom Gymnasium environments, topological nodal embeddings, dynamic action masking, and Dijkstra structural guidance to train PPO agents across complex graph branching spaces.  
+  `Python` · `Gymnasium` · `NetworkX` · `Reinforcement Learning` · `PPO`
+
+- **[My Agents & Agentic Workflows](https://github.com/francisconatale/my-agents)**  
+  Architectural patterns and implementations of autonomous agents tailored for backend design, frontend scaffolding, and automated verification workflows.  
+  `Python` · `LLM Orchestration` · `Prompt Engineering` · `Multi-Agent Systems`
+
+---
+
+### 🎓 Background & Education
+
+- **Analista en Computación** (Graduado, GPA: 8.76) — *Universidad Nacional de Río Cuarto (UNRC)*
+- **Licenciatura en Ciencias de la Computación** (En curso) — *Universidad Nacional de Río Cuarto (UNRC)*
+
+---
+
+<details>
+  <summary>📊 Activity & Metrics</summary>
+  <br>
+  <p align="center">
+    <img height="165" src="https://github-readme-stats.vercel.app/api?username=francisconatale&show_icons=true&hide_border=true&theme=tokyonight" alt="Francisco's GitHub stats" />
+    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=francisconatale&layout=compact&hide_border=true&theme=tokyonight" alt="Top languages" />
+  </p>
+</details>
