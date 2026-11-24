@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectComponent } from "@/components/ProjectComponent";
+import { StackSection } from "@/components/StackSection";
 import { ProfileSection } from "@/components/ProfileSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { portfolioData } from "@/data/portfolio";
@@ -14,18 +15,18 @@ export default function HomePage() {
         {/* ── 01: IDENTIDAD & HERO ────────────────────────────── */}
         <HeroSection />
 
-        {/* ── TRABAJO SELECCIONADO / PROYECTOS DESTACADOS ───── */}
+        {/* ── 02: PROYECTOS DESTACADOS ────────────────────────── */}
         <section
           id="proyectos"
-          className="w-full bg-white text-[#d80621] px-[6vw] pt-10 sm:pt-14 pb-20 sm:pb-28 font-body scroll-mt-14"
+          className="w-full bg-white text-[#d80621] px-[6vw] pt-16 sm:pt-20 lg:pt-24 pb-24 sm:pb-32 font-body scroll-mt-14"
         >
-          <div className="pb-8 sm:pb-10">
+          <div className="pb-8 sm:pb-12">
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-[#d80621] leading-none">
               Proyectos destacados
             </h2>
           </div>
 
-          <div className="flex flex-col gap-10 sm:gap-12">
+          <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20">
             {portfolioData.projects.map((project, idx) => (
               <ProjectComponent
                 key={project.title}
@@ -38,11 +39,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 03, 04, 05: PERFIL TÉCNICO, STACK & FORMACIÓN ──── */}
+        {/* ── 03: PERFIL TÉCNICO & FORMACIÓN (SOBRE MÍ) ──────── */}
         <ProfileSection />
+
+        {/* ── 04: STACK TECNOLÓGICO ───────────────────────────── */}
+        <StackSection />
       </main>
 
-      {/* ── 06: CONTACTO & FOOTER ──────────────────────────── */}
+      {/* ── 05: CONTACTO & FOOTER ──────────────────────────── */}
       <SiteFooter />
     </>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { portfolioData } from "@/data/portfolio";
 
 export function SiteFooter() {
   const [time, setTime] = useState<string>("");
@@ -44,16 +45,16 @@ export function SiteFooter() {
             ¿TENÉS UN PROYECTO EN MENTE?
           </div>
           <p className="site-footer-desc">
-            Desarrollador backend especializado en Java, Spring Boot y bases de datos relacionales.
+            {portfolioData.claim}
           </p>
         </div>
 
         {/* Giant CTA */}
         <div className="site-footer-cta-wrap">
           <a
-            href="mailto:francisconatale9@gmail.com"
+            href={`mailto:${portfolioData.email}`}
             className="site-footer-cta u-heading"
-            aria-label="Hablemos por email a francisconatale9@gmail.com"
+            aria-label={`Hablemos por email a ${portfolioData.email}`}
           >
             <span>HABLEMOS</span>
             <span className="site-footer-cta-arrow" aria-hidden="true">
@@ -71,15 +72,13 @@ export function SiteFooter() {
               <li>
                 <Link href="#inicio">Inicio</Link>
               </li>
-              <li>
-                <Link href="#proyectos">Proyectos</Link>
-              </li>
-              <li>
-                <Link href="#sobre-mi">Sobre mí</Link>
-              </li>
-              <li>
-                <Link href="#contacto">Contacto</Link>
-              </li>
+              {portfolioData.navLinks.map((nav) => (
+                <li key={nav.href}>
+                  <Link href={nav.href}>
+                    {nav.label.charAt(0).toUpperCase() + nav.label.slice(1).toLowerCase()}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -87,33 +86,13 @@ export function SiteFooter() {
           <div className="site-footer-col">
             <h3 className="site-footer-col-title u-heading">REDES</h3>
             <ul className="site-footer-col-list">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/francisconatale"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/francisconatale"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://hitlabs.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  HitLabs
-                </a>
-              </li>
+              {portfolioData.contactLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -123,14 +102,14 @@ export function SiteFooter() {
             <ul className="site-footer-col-list">
               <li>
                 <a
-                  href="mailto:francisconatale9@gmail.com"
+                  href={`mailto:${portfolioData.email}`}
                   className="site-footer-email-link"
                 >
-                  francisconatale9@gmail.com
+                  {portfolioData.email}
                 </a>
               </li>
               <li>
-                <span>Río Cuarto, Córdoba</span>
+                <span>{portfolioData.location}</span>
               </li>
             </ul>
           </div>
@@ -143,7 +122,7 @@ export function SiteFooter() {
                 <span>Argentina</span>
               </li>
               <li>
-                <span>Disponible remoto</span>
+                <span>{portfolioData.available}</span>
               </li>
               <li>
                 <span>
@@ -152,6 +131,12 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Bottom bar with copyright */}
+        <div className="pt-8 border-t border-white/20 flex flex-wrap items-center justify-between gap-4 text-xs font-mono opacity-80">
+          <span>© {portfolioData.year} {portfolioData.name}</span>
+          <span>Río Cuarto, Córdoba, Argentina</span>
         </div>
       </div>
     </footer>

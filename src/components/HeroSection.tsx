@@ -75,7 +75,7 @@ export function HeroSection() {
           </Link>
 
           <Link
-            href="/cv.pdf"
+            href={portfolioData.cvUrl ?? "/cv.pdf"}
             target="_blank"
             rel="noreferrer"
             style={{ color: "#ffffff" }}

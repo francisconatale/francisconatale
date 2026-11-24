@@ -125,32 +125,34 @@ export function ProjectComponent({
           className={`${contentSpan} ${contentOrder} p-6 sm:p-8 lg:p-10 flex flex-col justify-between gap-6 font-body`}
         >
           {/* Header: Category & Title */}
-          <div className="flex flex-col gap-1.5">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] opacity-75">
+          <div className="flex flex-col gap-1.5 pb-2 border-b border-[#d80621]/20">
+            <span className="text-xs sm:text-[13px] font-semibold uppercase tracking-[0.08em] opacity-75">
               {finalCategory}
             </span>
-            <h3 className="font-heading text-3xl sm:text-4xl text-[#d80621] leading-none tracking-tight">
+            <h3 className="font-heading text-3xl sm:text-4xl lg:text-[42px] text-[#d80621] leading-none tracking-tight pt-1">
               {finalTitle}
             </h3>
           </div>
 
-          {/* Problem & Description */}
+          {/* Contexto */}
           {finalProblem && (
-            <div className="text-[14px] sm:text-[15px] leading-relaxed opacity-90">
-              <span className="font-semibold text-[11px] uppercase tracking-wider block text-[#d80621] opacity-75 mb-1">
+            <div className="flex flex-col gap-2">
+              <span className="font-bold text-xs sm:text-[13px] uppercase tracking-[0.08em] text-[#d80621] opacity-80">
                 Contexto
               </span>
-              <p>{finalProblem}</p>
+              <p className="text-[15px] sm:text-[16px] lg:text-[17px] leading-relaxed opacity-90">
+                {finalProblem}
+              </p>
             </div>
           )}
 
-          {/* Fundamentals / Architecture decisions */}
+          {/* Decisiones técnicas */}
           {fundamentals && fundamentals.length > 0 && (
-            <div className="flex flex-col gap-2 pt-2 border-t border-[#d80621]/20">
-              <span className="font-semibold text-[11px] uppercase tracking-wider opacity-75">
+            <div className="flex flex-col gap-2.5 pt-4 border-t border-[#d80621]/20">
+              <span className="font-bold text-xs sm:text-[13px] uppercase tracking-[0.08em] text-[#d80621] opacity-80">
                 Decisiones técnicas
               </span>
-              <ul className="list-disc list-inside text-[13px] leading-relaxed opacity-85 space-y-1.5">
+              <ul className="list-disc list-outside pl-4 text-[14px] sm:text-[15px] leading-relaxed opacity-90 space-y-2">
                 {fundamentals.map((item, idx) => {
                   const colonIndex = item.indexOf(":");
                   if (colonIndex !== -1) {
@@ -169,24 +171,26 @@ export function ProjectComponent({
             </div>
           )}
 
-          {/* Result / Metrics */}
+          {/* Resultado (todo texto, sin caja) */}
           {finalResult && (
-            <div className="bg-[#d80621]/5 border-l-2 border-[#d80621] p-3 text-[13px] leading-snug">
-              <span className="font-semibold block text-[11px] uppercase tracking-wider mb-0.5 opacity-80">
+            <div className="flex flex-col gap-2 pt-4 border-t border-[#d80621]/20">
+              <span className="font-bold text-xs sm:text-[13px] uppercase tracking-[0.08em] text-[#d80621] opacity-80">
                 Resultado
               </span>
-              <span className="font-medium">{finalResult}</span>
+              <p className="text-[15px] sm:text-[16px] lg:text-[17px] leading-relaxed opacity-90 font-normal">
+                {finalResult}
+              </p>
             </div>
           )}
 
           {/* Footer: Tags & Link */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#d80621]/30">
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-[#d80621]/30">
             {finalTags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {finalTags.map((tag) => (
                   <span
                     key={tag}
-                    className="border border-[#d80621] px-2.5 py-0.5 text-[11px] uppercase tracking-wide opacity-80"
+                    className="border border-[#d80621] px-2.5 py-1 text-[11px] sm:text-[12px] uppercase tracking-wide opacity-80"
                   >
                     {tag}
                   </span>
@@ -199,9 +203,12 @@ export function ProjectComponent({
                 href={finalLink}
                 target="_blank"
                 rel="noreferrer"
-                className="font-heading text-sm uppercase tracking-wide border-b border-[#d80621] pb-0.5 hover:opacity-60 transition-opacity ml-auto"
+                className="group inline-flex items-center gap-1.5 font-heading text-sm sm:text-base uppercase tracking-wide border-b border-[#d80621] pb-0.5 hover:opacity-60 transition-opacity ml-auto"
               >
-                Ver proyecto ↗
+                <span>Ver proyecto</span>
+                <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  ↗
+                </span>
               </Link>
             )}
           </div>
