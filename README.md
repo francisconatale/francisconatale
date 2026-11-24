@@ -1,4 +1,4 @@
-# Hi there, I'm Francisco Natale 👋
+# Hi there, I'm Francisco Natale
 
 **Backend Engineer & Systems Architect** · Río Cuarto, Argentina
 
@@ -10,7 +10,7 @@ I specialize in designing and engineering resilient backend architectures, trans
 
 ---
 
-### 🛠️ Core Stack & Expertise
+### Core Stack & Expertise
 
 - **Backend & Languages:** Java (Spring Boot, Spring Security, JPA/Hibernate), TypeScript, Python
 - **Architecture & Patterns:** Clean / Hexagonal Architecture, Domain-Driven Design (DDD), Concurrency, Idempotency, Offline-First Sync
@@ -24,7 +24,7 @@ I specialize in designing and engineering resilient backend architectures, trans
 
 ---
 
-### 🚀 Featured Systems & Projects
+### Featured Systems & Projects
 
 - **[Kioskito — Production POS & Retail Management](https://kioskito-web.vercel.app)**  
   Full-scale Point of Sale (POS) and inventory platform operating in production. Features a transactional Spring Boot backend with caching and idempotency mechanisms to eliminate duplicate financial transactions, an offline-first client architecture using IndexedDB, and an automated NL2SQL pipeline for conversational business intelligence querying.  
@@ -48,7 +48,7 @@ I specialize in designing and engineering resilient backend architectures, trans
 
 ---
 
-### 🎓 Background & Education
+### Background & Education
 
 - **Analista en Computación** (Graduado, GPA: 8.76) — *Universidad Nacional de Río Cuarto (UNRC)*
 - **Licenciatura en Ciencias de la Computación** (En curso) — *Universidad Nacional de Río Cuarto (UNRC)*
