@@ -30,6 +30,10 @@ I specialize in designing and engineering resilient backend architectures, trans
   Full-scale Point of Sale (POS) and inventory platform operating in production. Features a transactional Spring Boot backend with caching and idempotency mechanisms to eliminate duplicate financial transactions, an offline-first client architecture using IndexedDB, and an automated NL2SQL pipeline for conversational business intelligence querying.  
   `Java` · `Spring Boot` · `PostgreSQL` · `Offline-First` · `NL2SQL` · `Docker`
 
+- **[Course Management & BPMN Platform](https://github.com/AlieniAgustin/GTPN-GestionCursos-Flowable)**  
+  Enterprise process orchestration platform integrating Flowable BPMN with a Spring Boot 3 BFF architecture. Features multi-context security via hierarchical SecurityFilterChains (@Order), dynamic polymorphic task resolution using Strategy + HATEOAS, and clean persistence boundaries between transient process state and PostgreSQL domain models.  
+  `Java 17` · `Spring Boot 3` · `Flowable BPMN` · `Spring Security 6` · `PostgreSQL` · `Docker`
+
 - **[Loyalty Backend Service](https://github.com/francisconatale/loyalty)**  
   High-throughput backend service engineered for customer loyalty programs, point rewards, coupons, and automated marketing campaigns, designed for turnkey integration with retail POS infrastructure.  
   `Java` · `Spring Boot` · `Clean Architecture` · `PostgreSQL` · `REST API`

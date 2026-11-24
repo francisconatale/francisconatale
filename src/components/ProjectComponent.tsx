@@ -38,6 +38,7 @@ export interface ProjectComponentProps {
   /**
    * Optional manual overrides if not using the project prop:
    */
+  role?: string;
   title?: string;
   category?: string;
   problem?: string;
@@ -54,6 +55,7 @@ export function ProjectComponent({
   imageSrc,
   imageAlt,
   fundamentals,
+  role,
   title,
   category,
   problem,
@@ -64,6 +66,7 @@ export function ProjectComponent({
 }: ProjectComponentProps) {
   // Merge direct props with project object
   const finalTitle = title ?? project?.title ?? "Proyecto";
+  const finalRole = role ?? project?.role;
   const finalCategory = category ?? project?.category ?? "Backend / Arquitectura";
   const finalProblem = problem ?? project?.problem ?? "";
   const finalResult = result ?? project?.result ?? "";
@@ -118,11 +121,18 @@ export function ProjectComponent({
         <div
           className={`${contentSpan} ${contentOrder} p-6 sm:p-8 lg:p-10 flex flex-col justify-between gap-6 font-body`}
         >
-          {/* Header: Category & Title */}
-          <div className="flex flex-col gap-2">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] opacity-70">
-              {finalCategory}
-            </span>
+          {/* Header: Category, Role & Title */}
+          <div className="flex flex-col gap-1.5">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.08em] opacity-75">
+                {finalCategory}
+              </span>
+              {finalRole && (
+                <span className="text-[11px] font-mono tracking-wide border border-[#d80621]/40 px-2 py-0.5 opacity-80">
+                  {finalRole}
+                </span>
+              )}
+            </div>
             <h3 className="font-heading text-3xl sm:text-4xl text-[#d80621] leading-none tracking-tight">
               {finalTitle}
             </h3>
@@ -132,7 +142,7 @@ export function ProjectComponent({
           {finalProblem && (
             <div className="text-[14px] sm:text-[15px] leading-relaxed opacity-90">
               <span className="font-semibold text-[11px] uppercase tracking-wider block text-[#d80621] opacity-75 mb-1">
-                Problema & Contexto
+                Contexto
               </span>
               <p>{finalProblem}</p>
             </div>
@@ -142,12 +152,23 @@ export function ProjectComponent({
           {fundamentals && fundamentals.length > 0 && (
             <div className="flex flex-col gap-2 pt-2 border-t border-[#d80621]/20">
               <span className="font-semibold text-[11px] uppercase tracking-wider opacity-75">
-                Fundamentos Técnicos
+                Decisiones técnicas
               </span>
-              <ul className="list-disc list-inside text-[13px] leading-relaxed opacity-85 space-y-1">
-                {fundamentals.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
+              <ul className="list-disc list-inside text-[13px] leading-relaxed opacity-85 space-y-1.5">
+                {fundamentals.map((item, idx) => {
+                  const colonIndex = item.indexOf(":");
+                  if (colonIndex !== -1) {
+                    const decTitle = item.slice(0, colonIndex);
+                    const decDesc = item.slice(colonIndex + 1);
+                    return (
+                      <li key={idx}>
+                        <strong className="font-semibold text-[#d80621]">{decTitle}:</strong>
+                        {decDesc}
+                      </li>
+                    );
+                  }
+                  return <li key={idx}>{item}</li>;
+                })}
               </ul>
             </div>
           )}
