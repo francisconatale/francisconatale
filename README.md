@@ -42,10 +42,6 @@ I specialize in designing and engineering resilient backend architectures, trans
   Graph-based urban navigation simulation powered by Reinforcement Learning. Features custom Gymnasium environments, topological nodal embeddings, dynamic action masking, and Dijkstra structural guidance to train PPO agents across complex graph branching spaces.  
   `Python` · `Gymnasium` · `NetworkX` · `Reinforcement Learning` · `PPO`
 
-- **[My Agents & Agentic Workflows](https://github.com/francisconatale/my-agents)**  
-  Architectural patterns and implementations of autonomous agents tailored for backend design, frontend scaffolding, and automated verification workflows.  
-  `Python` · `LLM Orchestration` · `Prompt Engineering` · `Multi-Agent Systems`
-
 ---
 
 ### Background & Education
@@ -54,12 +50,3 @@ I specialize in designing and engineering resilient backend architectures, trans
 - **Licenciatura en Ciencias de la Computación** (En curso) — *Universidad Nacional de Río Cuarto (UNRC)*
 
 ---
-
-<details>
-  <summary>📊 Activity & Metrics</summary>
-  <br>
-  <p align="center">
-    <img height="165" src="https://github-readme-stats.vercel.app/api?username=francisconatale&show_icons=true&hide_border=true&theme=tokyonight" alt="Francisco's GitHub stats" />
-    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=francisconatale&layout=compact&hide_border=true&theme=tokyonight" alt="Top languages" />
-  </p>
-</details>
