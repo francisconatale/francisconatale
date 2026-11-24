@@ -17,9 +17,9 @@ export default function HomePage() {
         {/* ── TRABAJO SELECCIONADO / PROYECTOS DESTACADOS ───── */}
         <section
           id="proyectos"
-          className="w-full bg-white text-[#d80621] px-[6vw] pt-8 sm:pt-10 pb-20 sm:pb-28 font-body scroll-mt-14"
+          className="w-full bg-white text-[#d80621] px-[6vw] pt-10 sm:pt-14 pb-20 sm:pb-28 font-body scroll-mt-14"
         >
-          <div className="pb-5 sm:pb-6">
+          <div className="pb-8 sm:pb-10">
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-[#d80621] leading-none">
               Proyectos destacados
             </h2>

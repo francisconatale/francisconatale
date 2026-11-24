@@ -72,6 +72,7 @@ export function ProjectComponent({
   const finalResult = result ?? project?.result ?? "";
   const finalTags = tags ?? project?.tags ?? [];
   const finalLink = link ?? project?.link;
+  const finalImageSrc = imageSrc ?? project?.image;
   const finalAlt = imageAlt ?? finalTitle;
 
   const is3070 = ratio === "30/70";
@@ -97,14 +98,16 @@ export function ProjectComponent({
               : "lg:border-r lg:border-[#d80621]"
           } bg-[#d80621]/5 flex items-center justify-center overflow-hidden`}
         >
-          {imageSrc ? (
-            <Image
-              src={imageSrc}
-              alt={finalAlt}
-              fill
-              className="object-cover transition-transform duration-500 hover:scale-105"
-              sizes={is3070 ? "(max-width: 1024px) 100vw, 30vw" : "(max-width: 1024px) 100vw, 70vw"}
-            />
+          {finalImageSrc ? (
+            <div className="relative w-full h-full min-h-[260px] flex items-center justify-center p-6">
+              <Image
+                src={finalImageSrc}
+                alt={finalAlt}
+                fill
+                className="object-contain p-6 transition-transform duration-500 hover:scale-105"
+                sizes={is3070 ? "(max-width: 1024px) 100vw, 30vw" : "(max-width: 1024px) 100vw, 70vw"}
+              />
+            </div>
           ) : (
             <div className="p-8 flex flex-col items-center justify-center text-center gap-3 select-none">
               <span className="font-heading text-5xl sm:text-6xl text-[#d80621]/30">
@@ -121,18 +124,11 @@ export function ProjectComponent({
         <div
           className={`${contentSpan} ${contentOrder} p-6 sm:p-8 lg:p-10 flex flex-col justify-between gap-6 font-body`}
         >
-          {/* Header: Category, Role & Title */}
+          {/* Header: Category & Title */}
           <div className="flex flex-col gap-1.5">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.08em] opacity-75">
-                {finalCategory}
-              </span>
-              {finalRole && (
-                <span className="text-[11px] font-mono tracking-wide border border-[#d80621]/40 px-2 py-0.5 opacity-80">
-                  {finalRole}
-                </span>
-              )}
-            </div>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] opacity-75">
+              {finalCategory}
+            </span>
             <h3 className="font-heading text-3xl sm:text-4xl text-[#d80621] leading-none tracking-tight">
               {finalTitle}
             </h3>

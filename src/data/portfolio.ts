@@ -14,6 +14,7 @@ export interface Project {
   tags: string[];
   result: string;
   link?: string;
+  image?: string;
 }
 
 export interface ContactLink {
@@ -101,6 +102,7 @@ export const portfolioData = {
       title: "Kioskito",
       category: "Gestión comercial y análisis de negocio",
       role: "Full-Stack Developer",
+      image: "/projects/kioskito.png",
       problem:
         "Desarrollo de una plataforma de gestión comercial para pequeños comercios. El objetivo es centralizar las operaciones diarias y proporcionar información sobre el desempeño del negocio mediante estadísticas y reportes. Los principales desafíos técnicos eran garantizar la integridad de las ventas, el aislamiento de datos entre comercios y la continuidad operativa ante problemas de conectividad.",
       decisiones: [
@@ -151,6 +153,7 @@ export const portfolioData = {
       title: "Bien Hecho",
       category: "Gestión de presupuestos comerciales",
       role: "Backend & Database Developer",
+      image: "/projects/bien-hecho.png",
       problem:
         "Desarrollo de una plataforma para trabajadores independientes orientada a simplificar la elaboración y gestión de presupuestos. El desafío era estructurar la información comercial de cada usuario, facilitar el cálculo de materiales y mano de obra y garantizar el aislamiento de los datos entre cuentas.",
       decisiones: [
